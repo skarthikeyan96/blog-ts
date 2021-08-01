@@ -1,8 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import useSWR from 'swr';
 
-export default function Home() {
+// @ts-ignore :: NEED TO FIX IT LATER
+const fetcher = (...args:any) => fetch(...args).then(res => res.json())
+
+export default function Home(props:any) {
+  const { data } = useSWR(`/api/posts/`, fetcher);
+
+  console.log(data)
+  if (!data) {
+    return 'Loading...';
+  }
+
   return (
     <div className={styles.container}>
       <Head>
