@@ -13,3 +13,8 @@ yarn install
 yarn dev
 ```
 
+Create a firebase account and grab the details from the `project-settings(general)` and `service-accounts` which is mentioned in `env.example` 
+
+Now create `.env.local` in the root directory , copy the keys from `env.example` and the relevant values taken from  the `firebase-console`. 
+
+🔥 You are successfully connected to the cloud firestore. 
