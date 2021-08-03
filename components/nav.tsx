@@ -2,11 +2,17 @@ import React from 'react';
 import Link from 'next/link'
 
 import { MoonIcon } from '@heroicons/react/solid'
+import {useTheme} from 'next-themes'
 
 const Nav = () => {
+    const {theme, setTheme} = useTheme()
+
+    const setMode = () => {
+        theme === 'dark'
+    }
     return (
 
-        <header className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 bg-white py-6 px-6 relative">
+        <header className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 py-6 px-6 relative">
 
             <Link href="/">
                 <a className="block">
@@ -24,7 +30,7 @@ const Nav = () => {
                     <a>Blog</a>
                 </Link>
                 <Link href="/">
-                    <a><MoonIcon className="h-5 w-5 text-blue-500" /></a>
+                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}><MoonIcon className="h-5 w-5 text-blue-500" /></button>
                 </Link>
 
             </nav>
