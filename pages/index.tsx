@@ -1,13 +1,20 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import useSWR from "swr";
-import Layout from "../components/layout";
+import React from "react"
+import Head from "next/head"
+// import Image from "next/image"
+// import styles from "../styles/Home.module.css"
+// import useSWR from "swr"
+import Layout from "../components/layout"
 
 // @ts-ignore :: NEED TO FIX IT LATER
 // const fetcher = (...args:any) => fetch(...args).then(res => res.json())
 
-export default function Home(props: any) {
+/**
+ *
+ * @param {props}
+ * @returns
+ */
+
+const Home = (props: any) => {
   // const { data } = useSWR(`/api/posts/`, fetcher);
 
   // console.log(data)
@@ -37,5 +44,7 @@ export default function Home(props: any) {
         </a> */}
       </footer>
     </div>
-  );
+  )
 }
+
+export default Home

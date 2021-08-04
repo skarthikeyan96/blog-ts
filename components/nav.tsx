@@ -1,15 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import React from "react"
+import Link from "next/link"
 
-import { MoonIcon } from "@heroicons/react/solid";
-import { useTheme } from "next-themes";
+import { MoonIcon } from "@heroicons/react/solid"
+import { useTheme } from "next-themes"
 
 const Nav = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
-  const setMode = () => {
-    theme === "dark";
-  };
   return (
     <header className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 py-6 px-6 relative">
       <Link href="/">
@@ -34,7 +31,7 @@ const Nav = () => {
         </Link>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
