@@ -1,4 +1,4 @@
-import admin from "firebase-admin";
+import admin from "firebase-admin"
 
 if (!admin.apps.length) {
   try {
@@ -10,9 +10,9 @@ if (!admin.apps.length) {
       }),
       // For the FIREBASE_DATABASE_URL add https://<database-name>.firebaseio.com. Replace database-name with your database name.
       databaseURL: process.env.FIREBASE_DATABASE_URL,
-    });
+    })
   } catch (error) {
-    console.log("Firebase admin initialization error", error.stack);
+    console.log("Firebase admin initialization error", error.stack)
   }
 }
-export default admin.firestore();
+export default admin.firestore()
