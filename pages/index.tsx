@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import useSWR from 'swr';
-import Layout from '../components/layout'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import useSWR from "swr";
+import Layout from "../components/layout";
 
 // @ts-ignore :: NEED TO FIX IT LATER
 // const fetcher = (...args:any) => fetch(...args).then(res => res.json())
 
-export default function Home(props:any) {
+export default function Home(props: any) {
   // const { data } = useSWR(`/api/posts/`, fetcher);
 
   // console.log(data)
@@ -23,7 +23,7 @@ export default function Home(props:any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout> </Layout>
-    
+
       <footer>
         {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -37,5 +37,5 @@ export default function Home(props:any) {
         </a> */}
       </footer>
     </div>
-  )
+  );
 }
