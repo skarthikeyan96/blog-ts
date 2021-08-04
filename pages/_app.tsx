@@ -1,13 +1,12 @@
-import 'tailwindcss/tailwind.css'
-import type { AppProps } from 'next/app'
-import {ThemeProvider} from 'next-themes'
-
+import "tailwindcss/tailwind.css";
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return  ( 
+  return (
     <ThemeProvider>
       <Component {...pageProps} />
-      </ThemeProvider>
-  )
+    </ThemeProvider>
+  );
 }
-export default MyApp
+export default MyApp;
