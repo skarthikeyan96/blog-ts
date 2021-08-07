@@ -8,9 +8,16 @@ const fetchFromForem = async () => {
   })
   const data = await r.json()
   data.forEach((element) => {
+    const header = `
+    ---
+    title: ${element.title}
+    description: ${element.description}
+    published_at: ${element.published_at}
+    ---
+    `
     fs.writeFile(
       `data/blog/${element.slug}.mdx`,
-      element.body_markdown,
+      header + element.body_markdown,
       function (err) {
         if (err) {
           return console.log(err)
