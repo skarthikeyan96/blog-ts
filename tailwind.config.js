@@ -2,9 +2,12 @@ module.exports = {
   purge: {
     enabled: true,
     options: {
-      safelist: ["dark"], //specific classes
+      safelist: ["dark"],
     },
-    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+    content: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+    ],
   },
   darkMode: "class", // or 'media' or 'class'
   theme: {
