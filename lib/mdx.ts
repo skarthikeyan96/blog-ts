@@ -3,7 +3,16 @@ import path from "path"
 import fs from "fs"
 const root = process.cwd()
 
-const getFrontMatter = () => {
+export const getFiles = (type = "blog") => {
+  return fs.readdirSync(path.join(root, "data", "blog"))
+}
+
+export const getFileBySlug = (slug: string) => {
+  const file = fs.readFileSync(path.join(root, "data", "blog", `${slug}.mdx`))
+  const mdxContent = matter(file)
+  return mdxContent
+}
+export const getFrontMatter = () => {
   const files = fs.readdirSync(path.join(root, "data", "blog"))
 
   return files.reduce((allPosts: any, postSlug) => {
@@ -21,4 +30,3 @@ const getFrontMatter = () => {
     ]
   }, [])
 }
-export default getFrontMatter

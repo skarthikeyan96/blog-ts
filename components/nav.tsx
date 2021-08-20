@@ -24,9 +24,7 @@ const Nav = () => {
         <Link href="/blog">
           <a>Blog</a>
         </Link>
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
           <MoonIcon className="h-5 w-5 text-blue-500" />
         </button>
       </nav>
