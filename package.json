@@ -15,7 +15,7 @@
     "check-types": "tsc --pretty --noEmit"
   },
   "dependencies": {
-    "@heroicons/react": "1.0.3",
+    "@heroicons/react": "1.0.4",
     "@tailwindcss/typography": "0.4.1",
     "firebase-admin": "9.11.1",
     "next": "11.0.1",
