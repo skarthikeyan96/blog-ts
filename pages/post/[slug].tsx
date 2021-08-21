@@ -16,7 +16,7 @@ const Post: React.FC<Props> = (props) => {
       <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full">
         <div className="max-w-3xl mr-auto ml-auto">
           <div className="mt-4 mb-4">
-            <h1 className="font-bold text-3xl md:text-5xl tracking-normal mb-4 font-serif">
+            <h1 className="font-bold text-3xl md:text-4xl tracking-normal mb-4 font-serif">
               {" "}
               {props.frontMatter.title}{" "}
             </h1>

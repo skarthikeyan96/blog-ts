@@ -2,7 +2,8 @@ import matter from "gray-matter"
 import path from "path"
 import fs from "fs"
 import { serialize } from "next-mdx-remote/serialize"
-
+// @ts-ignore
+import rehypePrism from "@mapbox/rehype-prism"
 const root = process.cwd()
 
 export const getFiles = (type = "blog") => {
@@ -16,7 +17,7 @@ export const getFileBySlug = async (slug: string) => {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
       remarkPlugins: [],
-      rehypePlugins: [],
+      rehypePlugins: [rehypePrism],
     },
   })
   return {

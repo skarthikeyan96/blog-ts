@@ -17,10 +17,6 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.4.x/dist/typography.min.css"
-        />
         <Head />
         <body>
           <Main />
