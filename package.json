@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "@heroicons/react": "1.0.4",
-    "@mapbox/rehype-prism": "^0.7.0",
+    "@mapbox/rehype-prism": "0.7.0",
     "@tailwindcss/typography": "0.4.1",
     "firebase-admin": "9.11.1",
     "next": "11.1.0",
-    "next-mdx-remote": "^3.0.4",
+    "next-mdx-remote": "3.0.4",
     "next-themes": "0.0.15",
     "react": "17.0.2",
     "react-dom": "17.0.2",
