@@ -1,11 +1,13 @@
 import React from "react"
-import "tailwindcss/tailwind.css"
-import type { AppProps } from "next/app"
+import "../styles/global.css"
+import "../styles/prism.css"
 import { ThemeProvider } from "next-themes"
+
+import type { AppProps } from "next/app"
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
       <Component {...pageProps} />
     </ThemeProvider>
   )

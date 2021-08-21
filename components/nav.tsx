@@ -1,11 +1,16 @@
 import React from "react"
 import Link from "next/link"
-
-import { MoonIcon } from "@heroicons/react/solid"
 import { useTheme } from "next-themes"
+
+import { MoonIcon, SunIcon } from "@heroicons/react/solid"
 
 const Nav = () => {
   const { theme, setTheme } = useTheme()
+
+  const renderIcon = () => {
+    if (theme === "light") return <SunIcon className="h-5 w-5" />
+    return <MoonIcon className="h-5 w-5 text-blue-500" />
+  }
 
   return (
     <header className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 py-6 px-6 relative">
@@ -25,9 +30,11 @@ const Nav = () => {
           <a>Blog</a>
         </Link>
         <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() =>
+            theme === "light" ? setTheme("dark") : setTheme("light")
+          }
         >
-          <MoonIcon className="h-5 w-5 text-blue-500" />
+          {renderIcon()}
         </button>
       </nav>
     </header>

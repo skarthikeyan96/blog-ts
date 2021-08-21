@@ -16,10 +16,7 @@ const fetchFromForem = async () => {
   return data
 }
 
-const handler = async (
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   try {
     const batch = db.batch()
 
